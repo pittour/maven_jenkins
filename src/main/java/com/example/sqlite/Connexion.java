@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class Connexion {
     public static void bddConnexion(){
         System.out.println("Connexion à la bdd");
-        String url = "JDBC:sqlite::memory:";
+        String url = "JDBC:sqlite:resources:bdd.db";
         try {
             Class.forName("org.sqlite.JDBC");
             try(Connection conn = DriverManager.getConnection(url); Statement stmt = conn.createStatement();){
